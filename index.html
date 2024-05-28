@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>Nguyen Thi Huong Giang</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgba(255, 255, 255, 0.81);
+            margin: 0; padding: 0;
+        }
+
+        header {
+            background: rgb(25, 25, 25);
+            width: 100%;
+            position: relative;
+            z-index: 100;
+            user-select: none;
+            padding: 10px 12px;
+            box-sizing: border-box;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .topbar div {
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar img {
+            display: block;
+            object-fit: cover;
+            border-radius: 4px;
+            width: 20px;
+            height: 20px;
+            margin-right: 6px;
+        }
+
+        .header {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 30vh;
+            background-image: url('./image/cover1.JPG');
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .header div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 4px;
+            color: white;
+            font-size: 12px;
+            padding: 0.3em 1.5em;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            z-index: 200;
+        }
+
+        .profile-pic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 140px;
+            width: 140px;
+            margin-top: -70px;
+            z-index: 200;
+            overflow: hidden;
+        }
+
+        .profile-pic img {
+            object-fit: cover;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1.content {
+            font-size: 30px;
+            font-weight: 700;
+            margin-left: 160px;
+            padding-left: 2px;
+            padding-top: 3px;
+            padding-right: 2px;
+            word-break: break-word;
+            display: flex;
+        }
+
+        .profile {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+        }
+
+        .quote {
+            border-left: 3px solid white;
+            padding-left: 2px;
+            margin: 0; padding: 0;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .quote, .contact-info {
+            flex: 1;
+            padding: 10px;
+        }
+        .contact-info a {
+            color: rgb(182, 182, 182);
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .status {
+            font-weight: bold;
+            color: #143a4e;
+        }
+
+        .page {
+            display: none;
+            border-right: 3px solid white;
+            align-self: center;
+            max-width: 80%;
+            margin-top: 50px;
+            padding: 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .item {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            border-right: 2px solid #ccc;
+        }
+
+        .item:last-child {
+            border-right: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function showPage(pageId) {
+                $('.page').hide();
+                $('#' + pageId).show();
+            }
+
+            $('#learn-link').click(function() {
+                showPage('learn');
+            });
+
+            $('#explore-link').click(function() {
+                showPage('explore');
+            });
+
+            $('#travel-link').click(function() {
+                showPage('travel');
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div>
+                <img src="./image/ava1.JPG" alt="Profile Picture">
+                <span>Nguyen Thi Huong Giang</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="header" style="display: grid; width: 100%; height: 30vh;">
+        </div>
+        <div class="content">
+            <div class="profile-pic">
+                <img src="./image/ava1.JPG" alt="Profile Picture">
+            </div>
+            <h1>Nguyễn Thị Hương Giang</h1>
+            <div class="profile">
+                <div class="quote">
+                    <blockquote>Hello! I'm Giang. I like to <span><a id="learn-link" href="#" style="font-weight: bold; color: #529e72;">learn</a></span>, 
+                        <span><a id="explore-link" href="#" style="font-weight: bold; color: #5e87c9;">explore</a></span>, and 
+                        <span><a id="travel-link" href="#" style="font-weight: bold; color: #ca9849;">travel</a></span>.
+                    </blockquote>
+                </div>
+                <div class="contact-info">
+                    <div>
+                        <a href="mailto:nguyengiang153@kangwon.ac.kr">Email</a> | 
+                        <a href="https://www.linkedin.com/in/huonggiang153/">LinkedIn</a> | 
+                        <a href="https://www.instagram.com/giangnth.1503/">Instagram</a> | 
+                        <a href="https://www.facebook.com/huong.giang.153/">Facebook</a> | 
+                    </div>
+                    <div class="status">
+                        📍 Status: Updating
+                    </div>
+                </div>
+            </div>
+            <div id="learn" class="page">
+                <div style="margin-left: 15px; margin-right: 15px;">
+                    <div class="picture" style="overflow-x: scroll; overflow-y: hidden; white-space: nowrap; border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); scroll-behavior: smooth;">
+                        <div style="display: inline-flex; width: 100px; height: 150px;">
+                            <img src="./image/learn1.jpg" class="item">
+                            <img src="./image/learn2.jpg" class="item">
+                            <img src="./image/learn3.jpg" class="item">
+                            <img src="./image/learn4.jpg" class="item">
+                            <img src="./image/learn5.jpg" class="item">
+                            <img src="./image/learn6.jpg" class="item">
+                            <img src="./image/learn7.JPG" class="item">
+                            <img src="./image/learn8.jpg" class="item">
+                            <img src="./image/learn9.jpg" class="item">
+                            <img src="./image/learn10.jpg" class="item">
+                        </div>
+                    </div>
+                    <p>My name is Giang and I came from VietNam.</p>
+                    <p>I am studying abroad in South Korea as a Global Korea Scholar through Global Korea Scholarship(GKS) for Degree Program that sponsored by South Korea's Ministry of Education's NIIED.</p>
+                    <p>In this Scholarship program I spent a Korean-langquage-program year in Konyang University in Nonsan-si ChuncheonNam-do, South Korea. Spending he last 4 bachelor-program years in Kangwon National University in Chuncheon-si Kangwon-do, South Korea.</p>
+                    <p>Now I am a sophomore in Computer Science and Engineering department in Kangwon National University.</p>
+                    <p>The time I have spent in S.Korea such great time after earning TOPIK 5 wwith 221 scores for Proficiency in Korean. Eventhough I rarely spoke such a Korea word with Koreans ㅋㅋㅋㅋ. I also was the straight-A+ freshman. It's 'was' because 중간고사 진짜 망했다.</p>
+                    <p>Another things that I earnt a >900-score TOEIC (maybe another Test of proficiency in English in the fiture); I made friends with talented, skilled, qualified, accomplished friends in wide fields; I traveled with foreign friends to Busan, Daedu, Daechon, Gangneung, Donghae, Seoul, Nonsan and so on.</p>  
+                </div>
+            </div>
+            <div id="explore" class="page">
+                <div style="margin-left: 15px; margin-right: 15px;">
+                    <div class="picture" style="overflow-x: scroll; overflow-y: hidden; white-space: nowrap; border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); scroll-behavior: smooth;">
+                        <div style="display: inline-flex; width: 100px; height: 150px;">
+                            <img src="./image/explore1.JPG" class="item">
+                            <img src="./image/explore2.jpg" class="item">
+                            <img src="./image/explore10.jpg" class="item">
+                            <img src="./image/explore3.jpg" class="item">
+                            <img src="./image/explore4.jpg" class="item">
+                            <img src="./image/explore5.JPG" class="item">
+                            <img src="./image/explore6.JPG" class="item">
+                            <img src="./image/explore7.JPG" class="item">
+                            <img src="./image/explore8.JPG" class="item">
+                            <img src="./image/explore9.JPG" class="item">
+                        </div>
+                    </div>
+                    <p>I know that there's a lot if things in this world that we have to know or have to learn. But the thing is it is a lot. We can learn through books, schools, university... whatever! but studying abroad showed me a huge oppotunity to learn things from people around world.</p>
+                    <p>I am very luckily that have so many great friends from Japan, Mongolia, Ukraine, Kazakhstan, also from VietNam.</p>
+                    <p>My friends teach me many interesting and new things. Their life stories, the experiences they've been through, and their perspectives on life and people through different lenses... all of these are very difficult to learn from books alone. These things have also gradually made me more sociable, no longer shy or afraid when talking to strangers.</p>
+                    <p>And that's why I love exploration. Discovering new things, uncovering what I don't yet know, to see the diverse and vibrant colors of this world.</p>
+                </div>
+            </div>
+            <div id="travel" class="page">
+                <div style="margin-left: 15px; margin-right: 15px;">
+                    <div class="picture" style="overflow-x: scroll; overflow-y: hidden; white-space: nowrap; border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); scroll-behavior: smooth;">
+                        <div style="display: inline-flex; width: 100px; height: 150px;">
+                            <img src="./image/travel1.jpg" class="item">
+                            <img src="./image/travel10.JPG" class="item">
+                            <img src="./image/travel11.jpg" class="item">
+                            <img src="./image/travel12.jpg" class="item">
+                            <img src="./image/travel13.jpg" class="item">
+                            <img src="./image/travel14.jpg" class="item">
+                            <img src="./image/travel2.jpg" class="item">
+                            <img src="./image/travel3.jpg" class="item">
+                            <img src="./image/travel4.jpg" class="item">
+                            <img src="./image/travel5.jpg" class="item">
+                            <img src="./image/travel6.JPG" class="item">
+                            <img src="./image/travel7.jpg" class="item">
+                            <img src="./image/travel8.JPG" class="item">
+                            <img src="./image/travel9.jpg" class="item">
+                        </div>
+                    </div>
+                    <p>Travel</p>
+                    <p>Of course, I am incredibly passionate about traveling! And I also love traveling alone!</p>
+                    <p>Traveling can be a way to learn more about the history of a place, broaden my horizons with its majestic beauty, and especially to enjoy the local specialties.</p>
+                    <p>I am truly passionate about the kind of travel where I can just admire the beautiful scenery and enjoy delicious food. No worrying about deadlines, no caring about social media, no keeping track of time... I just need to relax and fully immerse in my own adventure. And of course, it would be many times happier if I could go with loved ones and cherished friends, ㅋㅋㅋㅋ.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
